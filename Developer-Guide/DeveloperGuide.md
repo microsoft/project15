@@ -8,5 +8,4 @@
 
     [Data ingestion and Data Pipeline](Data-Ingestion-Data-Pipeline.md)
 
-
 [Project 15 from Microsoft | Open Platform](../README.md)

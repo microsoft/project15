@@ -16,7 +16,7 @@
 		},
 		"runThisCommand": {
 			"defaultValue": "wget -q https://raw.githubusercontent.com/microsoft/project15/master/Deploy/tsi-setup.sh -O ./tsi-setup.sh && chmod +x tsi-setup.sh && ./tsi-setup.sh",
-            "type": "string",
+      "type": "string",
 			"metadata": {
 				"description": "Please run this command in Cloud Shell to retrieve Service Principal information"
 			}
