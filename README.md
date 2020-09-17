@@ -94,7 +94,7 @@ We hope you will join us!
 | [Pamela Cortez](https://www.linkedin.com/in/pamelacortezhellotechie/)      | Architect, Community Lead                                             |
 | [Sarah Maston](https://www.linkedin.com/in/smwmaston/)                     | Architect, Product Manager, Co-founder of Project 15                  |
 | [Daisuke Nakahara](https://www.linkedin.com/in/daisuke-nakahara-0a997818/) | Lead Architect for Project 15 Open Platform, Co-founder of Project 15 |
-| [Anders Zwartjes](https://www.linkedin.com/in/anderszwartjes/)             | Ecosystem, Strategy, Keeps plates spinning in the air with ease       |
+| [Anders Zwartjes](https://www.linkedin.com/in/anderszwartjes/)             | Project Stratigist, Marketer, Storyteller       |
 
 | The Project 15 Project Sponsors                                   | Role                                                               |
 |-------------------------------------------------------------------|:-------------------------------------------------------------------|
