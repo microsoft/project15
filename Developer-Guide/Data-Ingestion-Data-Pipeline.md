@@ -39,7 +39,7 @@ Events are generated sporadically when a certain condition(s) is met.  Events do
 
 Events sent to IoT Hub from devices (ingress) must be sent to the backend services (egress) to be consumed and create value.  
 
-In the solution template, all events received by IoT Hub is forwarded (or routed) to Event Hubs.
+In the Open Platform, all events received by IoT Hub is forwarded (or routed) to Event Hubs.
 
 Devices send events in the same way they send telemetry.  Events and telemetry must be processed in different manners.
 
@@ -162,3 +162,5 @@ If a solution requires (near) real-time analytics, consider adding Azure Stream 
 ### Sharing Data with another party
 
 The Open Platform does not provide external (or public) interface to share/exchange data with external sites/solutions.  You may add API interfaces such as REST API to publish and/or subscribe data to/from external data source.
+
+[Project 15 from Microsoft | Open Platform](../README.md)
