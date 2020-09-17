@@ -186,6 +186,5 @@ If you have Raspberry Pi and SenseHat, please visit <https://github.com/daisukei
 ## Next Step
 
 - Developers : Learn more technical details of the Open Platform [Open Platform Developer Guide : Architecture Overview](../Developer-Guide/Architecture-Overview.md)
-- Scientists : ???
 
 [Project 15 from Microsoft | Open Platform](../README.md)
