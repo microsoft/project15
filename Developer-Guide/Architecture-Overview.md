@@ -71,3 +71,4 @@ More on Data Pipeline : [Open Platform Developer Guide : Data Ingestion and Data
 
 ![Architecture Detail](media/Architecture-Detail.png)
 
+[Project 15 from Microsoft | Open Platform](../README.md)

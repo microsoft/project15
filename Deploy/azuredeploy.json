@@ -15,7 +15,7 @@
 			}
 		},
 		"runThisCommand": {
-			"defaultValue": "wget -q https://raw.githubusercontent.com/daisukeiot/Solution-Template-ARM/master/tsi-setup.sh && chmod +x tsi-setup.sh && ./tsi-setup.sh",
+			"defaultValue": "wget -q https://raw.githubusercontent.com/microsoft/project15/master/Deploy/tsi-setup.sh -O ./tsi-setup.sh && chmod +x tsi-setup.sh && ./tsi-setup.sh",
             "type": "string",
 			"metadata": {
 				"description": "Please run this command in Cloud Shell to retrieve Service Principal information"
@@ -66,9 +66,9 @@
 		"storageAccountName": "[toLower(concat('stor', take(uniqueString(resourceGroup().id),5)))]",
 		"signalrName": "[concat('SignalR-', take(uniqueString(resourceGroup().id),5))]",
 		"webSiteName": "[concat('Portal-', take(uniqueString(resourceGroup().id),5))]",
-		"webRepoUrl": "https://github.com/daisukeiot/Solution-Template-WebApp.git",
+		"webRepoUrl": "https://github.com/microsoft/project15-openplatform-webapp.git",
 		"webRepoBranch": "v0.5",
-		"functionRepoUrl": "https://github.com/daisukeiot/Solution-Template-Functions.git",
+		"functionRepoUrl": "https://github.com/microsoft/project15-openplatform-functions.git",
 		"functionRepoBranch": "v0.5",
 		"dpsName": "[concat('DPS-', take(uniqueString(resourceGroup().id),5))]",
 		"tsiEnvironment" : "[concat('TSI-', take(uniqueString(resourceGroup().id),5))]",
