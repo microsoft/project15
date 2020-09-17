@@ -7,7 +7,7 @@ Click `Deploy to Azure` button below
 > [!TIP]  
 > Right click the button below and select `Open link in new tab` or `Open lin in new window`
 
-<a href="https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fproject15%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank"><img src="deploy-to-azure.svg"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fproject15%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank"><img src="deploy-to-azure.svg"/></a>
 
 ## 1. Start Cloud Shell
 
