@@ -1,6 +1,23 @@
 # Deploying Project 15 from Microsoft Open Platform
 
-Azure Time Series Insights (TSI) requires implicit access permission using Azure Active Directory.  Currently there is no easy way to configure Azure Active Directory though the Azure Resource Manager (ARM) template, therefore, we are asking you to take a number of small manual steps as a temporary solution.
+This document walks through :
+
+- How to deploy Project 15 from Microsoft | Open Platform
+- Basic navigation using Raspberry Pi emulator
+
+## Requirements
+
+- Azure Subscription
+    You must be an administrator or an owner of the subscription
+- A PC with Web Browser
+- (Optional) Raspberry Pi 4 + Sensehat
+
+If you do not have Azure Subscription, please create an account for free (12 months)
+
+<https://azure.microsoft.com/free/>
+
+> [!CAUTION]  
+> Negative potential consequences of an actionAzure Time Series Insights (TSI) requires implicit access permission using Azure Active Directory.  Currently there is no easy way to configure Azure Active Directory though the Azure Resource Manager (ARM) template, therefore, we are asking you to take a number of small manual steps as a temporary solution.
 
 Click `Deploy to Azure` button below  
 
@@ -43,6 +60,19 @@ You may copy the command from the `Run this command` field.
 Once the command completes, you will find 4 output lines in the Cloud Shell. This process takes roughly a minute.  
 
 ![Deployment 05](media/Deployment-05.png)
+
+> [!TIP]  
+> If you encounter permission error(s), please make sure you are the administrator or the owner of the account.
+
+> [!TIP]  
+> If you have multiple subscripitions, please make sure to set account before running above commands with :
+>  
+> ```bash  
+> az login  
+> az account set --subscription <Your Subscription Name or ID>  
+>```
+
+
 
 ## 3. Enter Service Principal Information into the Template
 
