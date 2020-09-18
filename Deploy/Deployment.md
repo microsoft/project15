@@ -7,9 +7,9 @@ This document walks through :
 
 ## Requirements
 
-- Azure Subscription
+- Azure Subscription  
     You must be an administrator or an owner of the subscription
-- A PC with Web Browser
+- A PC with Web Browser  
 - (Optional) Raspberry Pi 4 + Sensehat
 
 If you do not have Azure Subscription, please create an account for free (12 months)
