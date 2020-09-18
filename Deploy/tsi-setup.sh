@@ -1,4 +1,6 @@
-spName='Porject15-OpenPlatform-TSI-SP'
+subscriptionId=$(az account show --query id -o tsv)
+
+spName='Porject15-OpenPlatform-TSI-SP'-"$subscriptionId"
 
 servicePrincipalAppId=$(az ad app list --show-mine --query "[?displayName=='$spName'].appId" -o tsv)
 
