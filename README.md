@@ -89,14 +89,13 @@ This project started about a year and a half ago, it is 9/15/2020 at the time of
 
 We hope you will join us!  
 
-| The Project 15 Principal Team Members                                      | Role                                                                  |
-|----------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| [Pamela Cortez](https://www.linkedin.com/in/pamelacortezhellotechie/)      | Architect, Community Lead                                             |
-| [Sarah Maston](https://www.linkedin.com/in/smwmaston/)                     | Architect, Product Manager, Co-founder of Project 15                  |
-| [Daisuke Nakahara](https://www.linkedin.com/in/daisuke-nakahara-0a997818/) | Lead Architect for Project 15 Open Platform, Co-founder of Project 15 |
-| [Anders Zwartjes](https://www.linkedin.com/in/anderszwartjes/)             | Project Stratigist, Marketer, Storyteller       |
-
-| [Lee Stott](https://www.linkedin.com/in/leestott/)                         | Academic Partnerships and Microsoft Learn Student Ambassadors Community       |
+| The Project 15 Principal Team Members                                      | Role                                                                   |
+|----------------------------------------------------------------------------|:-----------------------------------------------------------------------|
+| [Pamela Cortez](https://www.linkedin.com/in/pamelacortezhellotechie/)      | Architect, Community Lead                                              |
+| [Sarah Maston](https://www.linkedin.com/in/smwmaston/)                     | Architect, Product Manager, Co-founder of Project 15                   |
+| [Daisuke Nakahara](https://www.linkedin.com/in/daisuke-nakahara-0a997818/) | Lead Architect for Project 15 Open Platform, Co-founder of Project 15  |
+| [Anders Zwartjes](https://www.linkedin.com/in/anderszwartjes/)             | Project Stratigist, Marketer, Storyteller                              |                     
+| [Lee Stott](https://www.linkedin.com/in/leestott/)                         | Academic Partnerships and Microsoft Learn Student Ambassadors Community|
 
 | The Project 15 Project Sponsors                                   | Role                                                               |
 |-------------------------------------------------------------------|:-------------------------------------------------------------------|
