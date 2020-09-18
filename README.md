@@ -96,6 +96,8 @@ We hope you will join us!
 | [Daisuke Nakahara](https://www.linkedin.com/in/daisuke-nakahara-0a997818/) | Lead Architect for Project 15 Open Platform, Co-founder of Project 15 |
 | [Anders Zwartjes](https://www.linkedin.com/in/anderszwartjes/)             | Project Stratigist, Marketer, Storyteller       |
 
+| [Lee Stott](https://www.linkedin.com/in/leestott/)                         | Academic Partnerships and Microsoft Learn Student Ambassadors Community       |
+
 | The Project 15 Project Sponsors                                   | Role                                                               |
 |-------------------------------------------------------------------|:-------------------------------------------------------------------|
 | [Rodney Clark](https://www.linkedin.com/in/rodney-clark-4b69b16/) | Corporate Vice President, IoT and Mixed Reality Sales at Microsoft |
