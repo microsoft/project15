@@ -67,7 +67,7 @@ Once the command completes, you will find 4 output lines in the Cloud Shell. Thi
 > If you encounter permission error(s), please make sure you are the administrator or the owner of the account.
 
 > [!TIP]  
-> If you have multiple subscripitions, please make sure to set account before running above commands with :
+> If you have multiple subscriptions, please make sure to set account before running above commands with :
 >  
 > ```bash  
 > az login  
