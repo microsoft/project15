@@ -2,31 +2,34 @@
 
 This document walks through :
 
-- How to deploy Project 15 from Microsoft | Open Platform
+- How to deploy Project 15 from Microsoft Open Platform
 - Basic navigation using Raspberry Pi emulator
 
 ## Requirements
 
 - Azure Subscription  
+    If you do not have Azure Subscription, please create an account for free (12 months)
+
+    <https://azure.microsoft.com/free/>
+
     You must be an administrator or an owner of the subscription
+
 - A PC with Web Browser  
 - (Optional) Raspberry Pi 4 + Sensehat
 
-If you do not have Azure Subscription, please create an account for free (12 months)
-
-<https://azure.microsoft.com/free/>
-
-> [!CAUTION]  
-> Negative potential consequences of an actionAzure Time Series Insights (TSI) requires implicit access permission using Azure Active Directory.  Currently there is no easy way to configure Azure Active Directory though the Azure Resource Manager (ARM) template, therefore, we are asking you to take a number of small manual steps as a temporary solution.
+## 1. Start Deployment
 
 Click `Deploy to Azure` button below  
+
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fproject15%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank"><img src="deploy-to-azure.svg"/></a>
 
 > [!TIP]  
 > Right click the button below and select `Open link in new tab` or `Open lin in new window`
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fproject15%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank"><img src="deploy-to-azure.svg"/></a>
+## 2. Start Cloud Shell
 
-## 1. Start Cloud Shell
+> [!CAUTION]  
+> Azure Time Series Insights (TSI) requires implicit access permission using Azure Active Directory.  Currently there is no easy way to configure Azure Active Directory though the Azure Resource Manager (ARM) template, therefore, we are asking you to take a number of small manual steps as a temporary solution.
 
 An Azure service principal is a security identity used by user-created apps, services, and automation tools to access specific Azure resources.  Instead of having to manage access permission for each user, the web site will use the Service Principal to access data from TSI.
 
@@ -42,7 +45,7 @@ An Azure service principal is a security identity used by user-created apps, ser
 
     ![Deployment 03](media/Deployment-03.png)
 
-## 2. Create Service Principal
+## 3. Create Service Principal
 
 In Cloud Shell, copy & paste the entire block below
 
@@ -72,9 +75,7 @@ Once the command completes, you will find 4 output lines in the Cloud Shell. Thi
 > az account set --subscription <Your Subscription Name or ID>  
 >```
 
-
-
-## 3. Enter Service Principal Information into the Template
+## 4. Enter Service Principal Information into the Template
 
 Now provide Service Principal IDs and password into the template.
 
@@ -82,7 +83,7 @@ Copy & paste `Service Principal App Id`, `Service Principal Password`, `Service 
 
 ![Deployment 06](media/Deployment-06.png)
 
-## 4. Start Deployment
+## 5. Start Deployment
 
 1. Select `Subscription` (if you have more than one)
 1. Create a new `Resource Group` by clicking `Create new`  
@@ -136,25 +137,25 @@ The sample portal site has 4 big sections.
 
 ![Deployment 14](media/Deployment-14.png)
 
-1. Azure Time Series Insights (TSI)  
+- Azure Time Series Insights (TSI)  
 
     Telemetry and events from devices are sent to TSI.  
     This sample reads Temperature and Humidity data stored in TSI, and displays line charts
 
     More information on TSI : <https://docs.microsoft.com/en-us/azure/time-series-insights/overview-what-is-tsi>
 
-1. Azure Maps
+- Azure Maps
 
     For solutions to integrate location based services (e.g. GPS).  The sample only displays map.
 
-1. Device Management  
+- Device Management  
 
     Examples of how to register, delete, retrieve device information.  
 
     > [!NOTE]  
     > Currently the sample does not provide a way to interact with Device Provisioning Service.
 
-1. Device Telemetry and Events  
+- Device Telemetry and Events  
 
     Examples of how to receive real-time data from the backend system.  Receives and displays all device telemetry and events.
 
@@ -215,6 +216,6 @@ If you have Raspberry Pi and SenseHat, please visit <https://github.com/daisukei
 
 ## Next Step
 
-- Developers : Learn more technical details of the Open Platform [Open Platform Developer Guide : Architecture Overview](../Developer-Guide/Architecture-Overview.md)
+- Developers : Learn more technical details of the Open Platform Open Platform Developer Guide : [Architecture Overview](../Developer-Guide/Architecture-Overview.md)
 
-[Project 15 from Microsoft | Open Platform](../README.md)
+[Project 15 from Microsoft - Open Platform](../README.md)
