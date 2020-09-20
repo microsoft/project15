@@ -39,7 +39,7 @@ We are in the process of creating a list of known use cases with our scientific 
 The solution has three main categories
 
 1. **Components that are full included**  
-    These are Azure services that if someone was standing up the solution these parts of the infrastructure only need to be deployed once and then expanded as devices get added to the solution. To learn all the ins and outs of these services is a lift and would take time. Our theory here is that by this method, the technologist doesn't need to know every nitty-gritty detail and can expand their learning as needed. Of course if one wants to learn all the details, Microsoft Learn's [Introduction to Azure IoT](https://docs.microsoft.com/learn/paths/introduction-to-azure-iot/) has all you need to get going.  
+    These are Azure services that if someone was standing up the solution these parts of the infrastructure only need to be deployed once and then expanded as devices get added to the solution. To learn all the ins and outs of these services is a lift and would take time. Our theory here is that by this method, the technologist doesn't need to know every nitty-gritty detail and can expand their learning as needed. For learning about building an IoT Solution, a great resource to ramp up quickly on the concepts with real world examples and labs is available at [Internet of Things Learning Path](https://aka.ms/iotlp). Of course, if one wants to learn all the details, Microsoft Learn's [Introduction to Azure IoT](https://docs.microsoft.com/learn/paths/introduction-to-azure-iot/) has all you need. All our learning resources here, are free to you.  
 
 1. **Included Components but needs customization**  
     Here the solution will deploy these services for you, but you will start to modify and add to them based on your use case. The details of the services here are all explained in our [Project 15 Open Platform Developer Guide](Developer-Guide/DeveloperGuide.md). The high level architecture of what services are involved, see blow.  
@@ -89,12 +89,13 @@ This project started about a year and a half ago, it is 9/15/2020 at the time of
 
 We hope you will join us!  
 
-| The Project 15 Principal Team Members                                      | Role                                                                  |
-|----------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| [Pamela Cortez](https://www.linkedin.com/in/pamelacortezhellotechie/)      | Architect, Community Lead                                             |
-| [Sarah Maston](https://www.linkedin.com/in/smwmaston/)                     | Architect, Product Manager, Co-founder of Project 15                  |
-| [Daisuke Nakahara](https://www.linkedin.com/in/daisuke-nakahara-0a997818/) | Lead Architect for Project 15 Open Platform, Co-founder of Project 15 |
-| [Anders Zwartjes](https://www.linkedin.com/in/anderszwartjes/)             | Project Stratigist, Marketer, Storyteller       |
+| The Project 15 Principal Team Members                                      | Role                                                                   |
+|----------------------------------------------------------------------------|:-----------------------------------------------------------------------|
+| [Pamela Cortez](https://www.linkedin.com/in/pamelacortezhellotechie/)      | Architect, Community Lead                                              |
+| [Sarah Maston](https://www.linkedin.com/in/smwmaston/)                     | Architect, Product Manager, Co-founder of Project 15                   |
+| [Daisuke Nakahara](https://www.linkedin.com/in/daisuke-nakahara-0a997818/) | Lead Architect for Project 15 Open Platform, Co-founder of Project 15  |
+| [Anders Zwartjes](https://www.linkedin.com/in/anderszwartjes/)             | Project Stratigist, Marketer, Storyteller                              |                     
+| [Lee Stott](https://www.linkedin.com/in/leestott/)                         | Academic Partnerships and Microsoft Learn Student Ambassadors Community|
 
 | The Project 15 Project Sponsors                                   | Role                                                               |
 |-------------------------------------------------------------------|:-------------------------------------------------------------------|
