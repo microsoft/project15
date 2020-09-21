@@ -78,7 +78,7 @@ Once followings are implemented and configured, end users can simply turn on the
 1. Connect to IoT Hub using authentication data received from DPS
 
 > [!TIP]  
-> Azure Certified Device supports DPS.
+> DPS support is one of requirements for Azure 
 
 ### Solution and Device
 
@@ -129,5 +129,9 @@ More functionalities and user experiences can be added to the deployed solution 
     Including X.509 certificate management
 - Device Management  
     Depending on capabilities of the devices integrated to the deployed solution, more device management capabilities may be required
+
+## Next Steps
+
+- [Deep dive on X.509 Digital Signature](Digial-Signature.md)
 
 [Project 15 from Microsoft - Open Platform](../README.md)
