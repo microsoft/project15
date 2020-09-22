@@ -31,7 +31,6 @@ The mechanism on how private and public key are used in validating data integrit
 
     ![key pair 6](media/Key-Pair-06.png)
 
-
 ## Certificate Chain
 
 Now you can see how to validate the integrity of data using public key and private key.  Now the question is **How do I know my key is really valid?**
