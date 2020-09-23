@@ -37,7 +37,7 @@ The following is the steps to illustrate how the private key and the public key 
 
     ![key pair 1](media/Key-Pair-01.png)
 
-1. Public key must be shared with the other side of the communication (receiver).  
+1. Public key must be shared with the other side of the communication.  
 
     ![key pair 2](media/Key-Pair-02.png)
 
