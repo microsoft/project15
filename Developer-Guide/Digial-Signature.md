@@ -7,7 +7,7 @@ There is a set of rules for the key pair logic.
 
 ## Symmetric Encryption vs. Asymmetric Encryption
 
-Imagine a scenario you needs to send a sensitive document with your friend.  The basic method is to encrypt (or protect) with a password.  When your friend receives the document, he/she needs your password.  The question is how you want to share your password with your friend?  This is called Symmetric Encryption
+Imagine a scenario you needs to send a sensitive document to your friend.  The basic method is to encrypt (or protect) with a password.  When your friend receives the document, he/she needs your password.  The question is how you want to share your password with your friend?  This is called Symmetric Encryption
 
 Asymmetric Encryption is designed to solve this problem.  Asymmetric Encryption is how old fashion physical mailbox works.  This is achieved by generating a pair of key, called Private Key and Public Key.  They are mathematically linked to each other, called RSA algorithm.
 
