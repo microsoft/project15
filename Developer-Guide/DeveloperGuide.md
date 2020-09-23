@@ -4,6 +4,10 @@
 
     [Overview of Open Platform architecture](Architecture-Overview.md)
 
+1. IoT Device Management
+
+    [Device registration using Device Provisioning Service and IoT Hub](IoT-Device-Management.md)
+
 1. Understanding Data Ingestion and Data Pipeline
 
     [Data ingestion and Data Pipeline](Data-Ingestion-Data-Pipeline.md)
