@@ -26,8 +26,8 @@ Now with Private key and Public key, you can securely exchange the sensitive doc
 - Only **Public key** can decrypt data encrypted with **Private key** (Public key cannot decrypt)
 - Private key is stored in a safe location (e.g. secure server)
 - Public key is shared with clients
-- Client encrypts data with the public key.  => Only the server with the matching private key can decrypt data.
-- Server encrypts data with the private key. => Only clients with the matching public key can decrypt data.
+- Client encrypts data with the **Public key**.  => Only the intended server with the matching **Private key** can decrypt data.
+- Server encrypts data with the **Private key**. => Only intended clients with the matching **Public key** can decrypt data.
 
 ## A key pair - Private Key and Public Key to encrypt and decrypt
 
