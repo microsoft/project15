@@ -54,7 +54,6 @@ An intermediate certificate is an X.509 certificate, which has been signed by th
 
 A TPM is a type of hardware security module (HSM).  
 
-
 [Brief Introduction of TPM](https://trustedcomputinggroup.org/wp-content/uploads/TPM-2.0-A-Brief-Introduction.pdf) by Trusted Computing Group
 
 
