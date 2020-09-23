@@ -60,8 +60,92 @@ The following is the steps to illustrate how the private key and the public key 
 
     ![key pair 6](media/Key-Pair-06.png)
 
-## Certificate Chain
+## Certificates
 
 Now you can see how to validate the integrity of data using public key and private key.  Now the question is **How do I know my key is really valid?**
 
+1. Generate a key pair, **Private Key** and **Public Key**
+
+    ![Certificate 1](media/Certificate-01.png)
+
+1. Public key must be shared with the other side of the communication.  
+
+    ![Certificate 2](media/Certificate-02.png)
+
+1. Now the question is, **How can I trust this key?**
+
+    ![Certificate 2](media/Certificate-03.png)
+
+1. A 3rd party entity offers a service to prove the owner through a certification  
+
+    The 3rd party entity act as a notary or a lawyer to prove you signed
+
+    ![Certificate 4](media/Certificate-04.png)
+
+1. Copy A's Public Key in the certificate, and set **subject name**
+
+    Subject name tells who owns the matching private key  
+
+    ![Certificate 5](media/Certificate-05.png)
+
+1. Set issuer of the certificate
+
+    With this example, the issuer of the certificate is **Node C**
+
+    ![Certificate 6](media/Certificate-06.png)
+
+1. To ensure the authenticity of the certificate, Node C signs the certificate with its private key  
+
+    ![Certificate 7](media/Certificate-07.png)
+
+1. Send the certificate to Node B to validate A's public key  
+
+    ![Certificate 8](media/Certificate-08.png)
+
+1. Node B needs Node C's public key to decrypt the certificate  
+
+    In order to decrypt the certificate, Node B needs Node C's public key.  
+
+    > [!TIP]  
+    > Because the certificate is signed with C's Private Key, only C's public key can decrypt the certificate.
+
+    ![Certificate 9](media/Certificate-09.png)
+
+1. Another 3rd party entity offers a service to prove the ownership of C's Public Key  
+
+    Repeat the step #4 ~ #8 with :
+
+    - Public Key : C's Public Key
+    - Subject : Node C
+    - Issuer : Node D
+    - Digital Signature : Sign with Node D's private key
+
+    ![Certificate 10](media/Certificate-10.png)
+
+## Self Signed Certificate
+
+You may ask "This is endless...?".  This time, Node D creates another certificate that can be used to validate Certificate for B's public key.
+
+Create a new certificate with :
+
+- Public Key : D's public key
+- Subject : Node D
+- Issuer : Node D
+- Digital Signature : Sign with Node D's private key
+
+![Certificate 11](media/Certificate-11.png)
+
+The certificate is signed with the private key that is to validate the matching public key.  Signing the public key with the matching private key is called **Self-Sign**.  A certificate with self-sign is called **self-signed certificate**.  
+
+## Certificate Chain
+
+As you can see multiple certificates are connected.  This is called **certificate chain**.
+
+![Certificate 12](media/Certificate-12.png)
+
+The self-signed certificate is the origin of the certificate chain, and it's called **root certificate**. The root certificate has to be installed to the system in advance as a trusted root certificate.  Trusted root certificates are pre-installed in the operating system's certificate store.
+
+One or more certificates between the root certificate and the leaf certificates are called intermediate certificates.
+
 https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69
+
