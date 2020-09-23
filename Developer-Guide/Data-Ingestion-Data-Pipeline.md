@@ -163,4 +163,4 @@ If a solution requires (near) real-time analytics, consider adding Azure Stream 
 
 The Open Platform does not provide external (or public) interface to share/exchange data with external sites/solutions.  You may add API interfaces such as REST API to publish and/or subscribe data to/from external data source.
 
-[Project 15 from Microsoft | Open Platform](../README.md)
+[Project 15 from Microsoft : Open Platform](../README.md)
