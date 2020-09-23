@@ -147,5 +147,5 @@ The self-signed certificate is the origin of the certificate chain, and it's cal
 
 One or more certificates between the root certificate and the leaf certificates are called intermediate certificates.
 
-https://qiita.com/TakahikoKawasaki/items/4c35ac38c52978805c69
-
+[IoT Device Management](IoT-Device-Management.md)  
+[Project 15 from Microsoft - Open Platform](../README.md)
