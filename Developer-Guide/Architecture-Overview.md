@@ -92,7 +92,7 @@ Open Platform provides examples on :
 - A web site to interact with IoT Hub to perform device management tasks
 - Route device management events from IoT Hub to the web site
 
-More on IoT Device Management : [Open Platform Developer Guide : Device Provisioning](Device-Provisioning.md)
+More on IoT Device Management : [Open Platform Developer Guide : IoT Device Management](IoT-Device-Management.md)
 
 ![Device Management](media/DeviceManagement.png)
 
