@@ -83,7 +83,7 @@ Coming soon!
 
 ## About The Project 15 Team
 
-The team is actually a big "v-team" (virtual team) that has grown to touch many groups across Microsoft. It would be hard to list all the people that have helped in their weekend hours and spare time internally. It is Microsoft's mission to "Empower every person on the planet to achieve mor (e."  We released this Open Platform in the hopes it would be the bridge between the open source developer community and the scientific community. Accelerating development at a time where we all need to be all hands on deck to fix our Earth.  
+The team is actually a big "v-team" (virtual team) that has grown to touch many groups across Microsoft. It would be hard to list all the people that have helped in their weekend hours and spare time internally. It is Microsoft's mission to "Empower every person on the planet to achieve more."  We released this Open Platform in the hopes it would be the bridge between the open source developer community and the scientific community. Accelerating development at a time where we all need to be all hands on deck to fix our Earth.  
 
 This project started about a year and a half ago, it is 9/15/2020 at the time of this writing, as a "what if?" when Sarah had her aha moment that commercial IoT Solutions and devices could help the scientific community. If you ask her, she will tell you about a side conversation with Eric Dinerstein and how she didn't have a clue how to save an Elephant. But she gave him her word that if she could figure out a way to get an "army of nerds" like her to help him and his colleagues, she would.  
 
