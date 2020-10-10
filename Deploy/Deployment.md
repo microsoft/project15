@@ -91,12 +91,7 @@ Copy & paste **Service Principal App Id**, **Service Principal Password**, **Ser
 
     ![Deployment 07](media/Deployment-07.png)
 
-1. Select **Region** and **IoT Hub Location**, then click **Review + create**  
-
-    > [!IMPORTANT]  
-    > As of 9/11/2020, the solution accelerator uses new IoT Plug and Play features.  
-    > IoT Plug and Play is enabled in these regions. IoT Plug and Play will be enabled in all regions in the end of September 2020.
-    > Please select **Central US**, **Japan East**, or **North Europe**
+1. Select **Region** , then click **Review + create**  
 
     ![Deployment 08](media/Deployment-08.png)
 
