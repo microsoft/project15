@@ -2,21 +2,9 @@
 	"$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
 	"contentVersion": "1.0.0.0",
 	"parameters": {
-		"IotHubLocation": {
-			"defaultValue": "Central US",
-			"allowedValues": [
-				"Central US",
-				"Japan East",
-				"North Europe"
-			],
-			"type": "String",
-			"metadata": {
-				"description": "Region"
-			}
-		},
 		"runThisCommand": {
 			"defaultValue": "wget -q https://raw.githubusercontent.com/microsoft/project15/master/Deploy/tsi-setup.sh -O ./tsi-setup.sh && chmod +x tsi-setup.sh && ./tsi-setup.sh",
-      "type": "string",
+		    "type": "string",
 			"metadata": {
 				"description": "Please run this command in Cloud Shell to retrieve Service Principal information"
 			}
@@ -51,7 +39,6 @@
         }
 	},
 	"variables": {
-		"hubLocation": "[parameters('IotHubLocation')]",
 		"hubName": "[concat('Hub-', take(uniqueString(resourceGroup().id),5))]",
 		"hubEventHubs-cg": "[concat('Hub-', take(uniqueString(resourceGroup().id),5), '/events/eventhubs-cg')]",
 		"hubEventGridSystemTopic": "IoTHubSystemTopic",
@@ -81,7 +68,7 @@
 			"type": "Microsoft.EventHub/namespaces",
 			"apiVersion": "2018-01-01-preview",
 			"name": "[variables('ehNameSpace')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"tags": {
 				"ENV": "[variables('envTag')]"
 			},
@@ -124,7 +111,7 @@
 					"type": "eventhubs",
 					"apiVersion": "2017-04-01",
 					"name": "[variables('ehHubName')]",
-					"location": "[variables('hubLocation')]",
+					"location": "[resourceGroup().location]",
 					"dependsOn": [
 						"[resourceId('Microsoft.EventHub/namespaces', variables('ehNameSpace'))]"
 					],
@@ -187,7 +174,7 @@
 			"type": "Microsoft.Devices/IotHubs",
 			"apiVersion": "2020-03-01",
 			"name": "[variables('hubName')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"tags": {
 				"ENV": "[variables('envTag')]"
 			},
@@ -303,7 +290,7 @@
 			"type": "Microsoft.Devices/provisioningServices",
 			"apiVersion": "2020-01-01",
 			"name": "[variables('dpsName')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Devices/IotHubs', variables('hubName'))]"
 			],
@@ -320,7 +307,7 @@
 					{
 						"applyAllocationPolicy": true,
 						"connectionString": "[concat('HostName=', reference(resourceId('Microsoft.Devices/IoTHubs', variables('hubName')), providers('Microsoft.Devices', 'IoTHubs').apiVersions[0]).hostName, ';SharedAccessKeyName=iothubowner;SharedAccessKey=', listKeys(resourceId('Microsoft.Devices/IotHubs', variables('hubName')), providers('Microsoft.Devices', 'IoTHubs').apiVersions[0]).value[0].primaryKey)]",
-						"location": "[variables('hubLocation')]"
+						"location": "[resourceGroup().location]"
 					}
 				],
 				"allocationPolicy": "Hashed"
@@ -330,7 +317,7 @@
 			"type": "Microsoft.EventGrid/systemTopics",
 			"apiVersion": "2020-04-01-preview",
 			"name": "[variables('hubEventGridSystemTopic')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Devices/IotHubs', variables('hubName'))]"
 			],
@@ -346,7 +333,7 @@
 			"type": "Microsoft.Storage/storageAccounts",
 			"apiVersion": "2018-11-01",
 			"name": "[variables('storageAccountName')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"tags": {
 				"ENV": "[variables('envTag')]"
 			},
@@ -359,7 +346,7 @@
 			"type": "Microsoft.Web/serverfarms",
 			"apiVersion": "2018-11-01",
 			"name": "[variables('hostingPlanName')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"tags": {
 				"ENV": "[variables('envTag')]"
 			},
@@ -379,7 +366,7 @@
 			"type": "Microsoft.Web/sites",
 			"apiVersion": "2020-06-01",
 			"name": "[variables('functionAppName')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Devices/IotHubs', variables('hubName'))]",
 				"[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
@@ -447,7 +434,7 @@
 			"type": "Microsoft.SignalRService/SignalR",
 			"apiVersion": "2020-05-01",
 			"name": "[variables('signalrName')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"tags": {
 				"ENV": "[variables('envTag')]"
 			},
@@ -478,7 +465,7 @@
 			"type": "Microsoft.Web/sites",
 			"apiVersion": "2020-06-01",
 			"name": "[variables('webSiteName')]",
-			"location": "[variables('hubLocation')]",
+			"location": "[resourceGroup().location]",
 			"dependsOn": [
 				"[resourceId('Microsoft.TimeSeriesInsights/environments', variables('tsiEnvironment'))]",
 				"[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
@@ -584,7 +571,7 @@
             "type": "Microsoft.TimeSeriesInsights/environments",
             "apiVersion": "2020-05-15",
             "name": "[variables('tsiEnvironment')]",
-            "location": "[variables('hubLocation')]",
+            "location": "[resourceGroup().location]",
 			"tags": {
 				"ENV": "[variables('envTag')]"
 			},
@@ -610,7 +597,7 @@
 					"type": "eventsources",
 					"apiVersion": "2020-05-15",
 					"name": "[variables('tsiEventSource')]",
-		            "location": "[variables('hubLocation')]",
+		            "location": "[resourceGroup().location]",
 					"tags": {
 						"ENV": "[variables('envTag')]"
 					},
