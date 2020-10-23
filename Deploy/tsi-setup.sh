@@ -14,7 +14,7 @@ if [ -z "$servicePrincipalObjectId" ]; then
     servicePrincipalObjectId=$(az ad sp create --id $servicePrincipalAppId --query objectId -o tsv)
 fi
 
-servicePrincipalSecret=$(az ad app credential reset --id $servicePrincipalAppId --credential-description "TSISecret" --query password -o tsv)
+servicePrincipalSecret=$(az ad app credential reset --append --id $servicePrincipalAppId --credential-description "TSISecret" --query password -o tsv)
 servicePrincipalTenantId=$(az ad sp show --id $servicePrincipalAppId --query appOwnerTenantId -o tsv)
 
 echo 'Service Principal App Id    :' $servicePrincipalAppId
