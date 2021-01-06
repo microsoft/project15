@@ -608,21 +608,6 @@
         }
       ]
     },
-    // {
-    //   "type": "Microsoft.TimeSeriesInsights/environments/accesspolicies",
-    //   "apiVersion": "2020-05-15",
-    //   "name": "[concat(variables('tsi').environment, '/TSI-SP')]",
-    //   "scale": null,
-    //   "properties": {
-    //     "principalObjectId": "[parameters('servicePrincipalObjectId')]",
-    //     "roles": [
-    //       "Reader"
-    //     ]
-    //   },
-    //   "dependsOn": [
-    //     "[resourceId('Microsoft.TimeSeriesInsights/environments/', variables('tsi').environment)]"
-    //   ]
-    // },
     {
       "type": "Microsoft.Maps/accounts",
       "apiVersion": "2018-05-01",
