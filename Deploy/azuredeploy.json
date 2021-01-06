@@ -491,17 +491,18 @@
               "value": ""
             },
             {
-              "name": "Azure__TimeSeriesInsights__temperatureName",
-              "value": "temperature"
-            },
-            {
-              "name": "Azure__TimeSeriesInsights__humidityName",
-              "value": "humidity"
-            },
-            {
               "name": "Azure__TimeSeriesInsights__tsiUri",
               "value": "[reference(resourceId('Microsoft.TimeSeriesInsights/environments', variables('tsi').environment)).dataAccessFQDN]"
+            },
+            {
+              "name": "Azure__Dps__IdScope",
+              "value": "[reference(resourceId('Microsoft.Devices/ProvisioningServices',variables('dpsName'))).idScope]"
+            },
+            {
+              "name": "Azure__Dps__ConnectionString",
+              "value": "[concat('HostName=', variables('dpsName'), '.azure-devices-provisioning.net;SharedAccessKeyName=provisioningserviceowner;SharedAccessKey=', listKeys(resourceId('Microsoft.Devices/provisioningServices', variables('dpsName')), providers('Microsoft.Devices', 'provisioningServices').apiVersions[0]).value[0].primaryKey)]"
             }
+
           ]
         }
       },
