@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "UniqueID": {
-      "defaultValue": "[parameters('UniqueID')]",
+      "defaultValue": "[take(uniqueString(resourceGroup().id),5)]",
       "type": "string",
       "metadata": {
         "description": "Unique ID.  E.g. your name.  Must be Alphanumeric (a~z, 0~9), and 5~12 characters"
@@ -15,7 +15,7 @@
   "variables": {
     "location": "[resourceGroup().location]",
     "script": {
-      "tsi" : "https://raw.githubusercontent.com/microsoft/IoT-Plug-and-Play-Workshop/main/Deployment/ConfigureTSI.sh"
+      "tsi" : "https://raw.githubusercontent.com/microsoft/project15/dn-wip/Deploy/ConfigureTSI.sh"
     },
     "iotHub": {
       "hubName": "[concat('P15-IoTHub-', parameters('UniqueID'))]",
