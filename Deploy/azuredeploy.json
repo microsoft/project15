@@ -25,8 +25,8 @@
     "eventHubs": {
       "nameSpace": "[concat('P15-EventHubs-', parameters('UniqueID'))]",
       "hubName": "devicetelemetryhub",
-      "functionscg": "telemetry-functionscg",
-      "tsicg": "telemetry-tsicg",
+      "functionscg": "telemetry-functions-cg",
+      "tsicg": "telemetry-tsi-cg",
       "listenRule": "TelemetryListenRule",
       "sendRule": "TelemetrySendRule"
     },
