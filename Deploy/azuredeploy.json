@@ -444,7 +444,7 @@
         "cors": {
           "allowedOrigins": [
             "[concat('https://', toLower(variables('webApp').webPortal), '.azurewebsites.net')]",
-            "https://localhost:44355"
+            "https://localhost:44352"
           ]
         }
       }

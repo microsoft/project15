@@ -21,7 +21,7 @@ Click **Deploy to Azure** button below
 > [!TIP]  
 > Right click the button below and select **Open link in new tab** or **Open lin in new window**
 
-## 2. Create a new resource group
+## 2. Deploy Open Platform solution
 
 A resource group is a container that holds related resources for an Azure solution. Similar to folder and files.
 
@@ -100,14 +100,16 @@ Some Azure services require additional settings, such as permission and access c
 
 1. The command takes about 1~2 minutes to complete  
 
+    You may close `Cloud Shell` now.
+
     > [!TIP]
     > Ignore warnings and `ResourceNotFoundError`
 
     ![Deployment 11](media/Deployment-11.png)
 
-1. Open a new browser window or tab, then navigate to the web site  
+1. Open a new browser window or tab, then navigate to the web site using URL from `Outputs`    
 
-    You can find URL in `Outputs` of the deployment
+    You can find `_Web_Site_Address` in `Outputs` of the deployment
 
     ![Deployment 12](media/Deployment-12.png)
 
@@ -117,6 +119,7 @@ Some Azure services require additional settings, such as permission and access c
 
 ## Next Step
 
+- [Brief introduction](OpenPlatformPortal.md) of Open Platform Portal
 - [Connect a device](ConnectDevice.md) to the Open Platform web application
 - Developers : Learn more technical details of the Open Platform Open Platform Developer Guide : [Architecture Overview](../Developer-Guide/Architecture-Overview.md)
 
