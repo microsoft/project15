@@ -120,7 +120,7 @@ Some Azure services require additional settings, such as permission and access c
 ## Next Step
 
 - [Brief introduction](OpenPlatformPortal.md) of Open Platform Portal
-- [Connect a device](ConnectDevice.md) to the Open Platform web application
+- [Connect a device](ConnectingDevice.md) to the Open Platform web application
 - Developers : Learn more technical details of the Open Platform Open Platform Developer Guide : [Architecture Overview](../Developer-Guide/Architecture-Overview.md)
 
 [Project 15 from Microsoft - Open Platform](../README.md)
