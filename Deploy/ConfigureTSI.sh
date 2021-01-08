@@ -25,7 +25,7 @@ servicePrincipalObjectId=$(az ad sp show --id "https://${adAppName}" --query obj
 if [ -z "$servicePrincipalObjectId" ]; then
     servicePrincipalObjectId=$(az ad sp create --id $servicePrincipalAppId --query objectId -o tsv)
 fi
-servicePrincipalSecret=$(az ad app credential reset --append --id $servicePrincipalAppId --credential-description "TSISecret" --only-show-errors --query password -o tsv)
+servicePrincipalSecret=$(az ad app credential reset --append --id $servicePrincipalAppId --credential-description "TSISecret" --only-show-errors --query password --only-show-errors -o tsv )
 servicePrincipalTenantId=$(az ad sp show --id $servicePrincipalAppId --query appOwnerTenantId -o tsv)
 #json="{\"appId\":\"$servicePrincipalAppId\",\"spSecret\":\"$servicePrincipalSecret\",\"tenantId\":\"$servicePrincipalTenantId\",\"spObjectId\":\"$servicePrincipalObjectId\"}"
 az ad app update --id $servicePrincipalAppId --reply-urls "https://${webAppName}.azurewebsites.net/"
