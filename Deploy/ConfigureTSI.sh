@@ -16,7 +16,6 @@ adAppName='P15-TSI-AD-App'-"$subscriptionId"
 # az login --identity
 
 servicePrincipalAppId=$(az ad app list --all --query '[].{AppId:appId}' --display-name $adAppName -o tsv)
-
 if [ -z $servicePrincipalAppId ]; then
     servicePrincipalAppId=$(az ad app create --display-name $adAppName --identifier-uris "https://${adAppName}"  --oauth2-allow-implicit-flow true --required-resource-accesses '[{"resourceAppId":"120d688d-1518-4cf7-bd38-182f158850b6","resourceAccess":[{"id":"a3a77dfe-67a4-4373-b02a-dfe8485e2248","type":"Scope"}]}]' --query appId -o tsv)
 fi
