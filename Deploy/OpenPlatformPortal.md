@@ -54,9 +54,8 @@ You can use [Time Series Insights](https://docs.microsoft.com/en-us/azure/time-s
 
 ## 5 : Raw Data
 
-    Open Platform receives raw data from the backend solution in real time.  There are two types of data, Telemetry and Events.
-    [Read More ](../Developer-Guide/Data-Ingestion-Data-Pipeline.md) on data types.
-
+Open Platform receives raw data from the backend solution in real time.  There are two types of data, Telemetry and Events.
+[Read More ](../Developer-Guide/Data-Ingestion-Data-Pipeline.md) on data types.
 
 ## Next Step
 
