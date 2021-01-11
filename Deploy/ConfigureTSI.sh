@@ -38,7 +38,7 @@ echo "TSI Client ID : ${temp}"
 temp=$(az webapp config appsettings set --name $webAppName --resource-group $resGroup --settings Azure__TimeSeriesInsights__tsiSecret=$servicePrincipalSecret --query "[?name=='Azure__TimeSeriesInsights__tsiSecret'].[value]" -o tsv)
 echo "TSI Secret    : ${temp}"
 
-temp=$(az timeseriesinsights access-policy list -g $resGroup --environment-name $tsiName --query 'value[].principalObjectId' -o tsv)
+temp=$(az timeseriesinsights access-policy list -g $resGroup --environment-name $tsiName --query 'value[].principalObjectId' -o tsv --only-show-errors)
 
 if [ -z $temp ]; then
     temp=$(az timeseriesinsights access-policy create -g $resGroup --environment-name $tsiName -n "TSI-SP" --principal-object-id $servicePrincipalObjectId --roles Reader --only-show-errors)
