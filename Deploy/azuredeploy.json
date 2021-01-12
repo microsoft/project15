@@ -49,7 +49,8 @@
     "signalrName": "[concat('P15-SignalR-', parameters('UniqueID'))]",
     "dpsName": "[concat('P15-DPS-', parameters('UniqueID'))]",
     "envTag": "v0.6",
-    "mapName": "[concat('P15-MAP-', parameters('UniqueID'))]"
+    "mapName": "[concat('P15-MAP-', parameters('UniqueID'))]",
+    "modelRepoUrl": "https://raw.githubusercontent.com/daisukeiot/iot-plugandplay-models/main"
   },
   "resources": [
     {
@@ -501,8 +502,11 @@
             {
               "name": "Azure__Dps__ConnectionString",
               "value": "[concat('HostName=', variables('dpsName'), '.azure-devices-provisioning.net;SharedAccessKeyName=provisioningserviceowner;SharedAccessKey=', listKeys(resourceId('Microsoft.Devices/provisioningServices', variables('dpsName')), providers('Microsoft.Devices', 'provisioningServices').apiVersions[0]).value[0].primaryKey)]"
+            },
+            {
+              "name": "Azure__ModelRepository__repoUrl",
+              "value": "[variables('modelRepoUrl')]"
             }
-
           ]
         }
       },
