@@ -50,7 +50,7 @@
     "dpsName": "[concat('P15-DPS-', parameters('UniqueID'))]",
     "envTag": "v0.6",
     "mapName": "[concat('P15-MAP-', parameters('UniqueID'))]",
-    "modelRepoUrl": "https://raw.githubusercontent.com/daisukeiot/iot-plugandplay-models/main"
+    "modelRepoUrl": "https://raw.githubusercontent.com/daisukeiot/iot-plugandplay-models/privatemodels"
   },
   "resources": [
     {
