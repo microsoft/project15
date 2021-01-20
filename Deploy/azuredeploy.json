@@ -15,7 +15,7 @@
   "variables": {
     "location": "[resourceGroup().location]",
     "script": {
-      "tsi" : "https://raw.githubusercontent.com/microsoft/project15/dn-wip/Deploy/ConfigureTSI.sh"
+      "tsi" : "https://raw.githubusercontent.com/microsoft/project15/master/Deploy/ConfigureTSI.sh"
     },
     "iotHub": {
       "hubName": "[concat('P15-IoTHub-', parameters('UniqueID'))]",
