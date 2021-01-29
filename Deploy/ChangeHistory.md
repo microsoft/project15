@@ -50,3 +50,4 @@ A simulator running in the host for quick testing
 - Faster deployment (8.5 min from 15 min)
 - ADT Option in Deployment Template
 - Better location support (GPS data)
+- Added a text box to specify telemetry interval for TSI chart
