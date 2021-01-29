@@ -43,3 +43,10 @@ A simulator running in the host for quick testing
 - IoT Plug and Play support
 - ADT Support
 - New Portal UI
+
+## Version 0.7
+
+- DPS Custom allocation policy support
+- Faster deployment (8.5 min from 15 min)
+- ADT Option in Deployment Template
+- Better location support (GPS data)
