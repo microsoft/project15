@@ -52,3 +52,4 @@ A simulator running in the host for quick testing
 - Better location support (GPS data)
 - Added a text box to specify telemetry interval for TSI chart
 - If ADT is deployed, IoT Plug and Play devices will be added to ADT Graph via DPS
+
