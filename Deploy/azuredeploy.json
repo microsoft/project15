@@ -337,7 +337,7 @@
               "source": "DeviceLifecycleEvents",
               "condition": "true",
               "endpointNames": [
-                "events"
+                "DeviceTelemetryToEventHub-EP"
               ],
               "isEnabled": true
             },
@@ -346,7 +346,7 @@
               "source": "TwinChangeEvents",
               "condition": "true",
               "endpointNames": [
-                "events"
+                "DeviceTelemetryToEventHub-EP"
               ],
               "isEnabled": true
             },
@@ -355,7 +355,7 @@
               "source": "DigitalTwinChangeEvents",
               "condition": "true",
               "endpointNames": [
-                "events"
+                "DeviceTelemetryToEventHub-EP"
               ],
               "isEnabled": true
             },
