@@ -408,14 +408,14 @@
         "features": "None"
       },
       "resources" : [
-        {
-          "name": "[variables('iothub').eventHubsCG]",
-          "type": "Microsoft.Devices/iotHubs/eventhubEndpoints/ConsumerGroups",
-          "apiVersion": "2020-03-01",
-          "dependsOn": [
-            "[resourceId('Microsoft.Devices/IotHubs', variables('iothub').name)]"
-          ]
-        }
+        // {
+        //   "name": "[variables('iothub').eventHubsCG]",
+        //   "type": "Microsoft.Devices/iotHubs/eventhubEndpoints/ConsumerGroups",
+        //   "apiVersion": "2020-03-01",
+        //   "dependsOn": [
+        //     "[resourceId('Microsoft.Devices/IotHubs', variables('iothub').name)]"
+        //   ]
+        // }
       ]
     },
     // Configure DPS
@@ -822,8 +822,11 @@
       "condition" : "[parameters('AzureDigitalTwins')]",
       "name": "[variables('adt').name]",
       "type": "Microsoft.DigitalTwins/digitalTwinsInstances",
-      "apiVersion": "2020-10-31",
+      "apiVersion": "2020-12-01",
       "location": "[variables('adt').location]",
+      "tags": {
+        "ENV": "[variables('envTag')]"
+      },
       "properties": {}
     },
     {
