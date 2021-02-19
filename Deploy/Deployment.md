@@ -16,7 +16,7 @@ This document walks through :
 
 Click **Deploy to Azure** button below  
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fproject15%2Fdn-wip%2FDeploy%2Fazuredeploy.json" target="_blank"><img src="deploy-to-azure.svg"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fproject15%2Fmain%2FDeploy%2Fazuredeploy.json" target="_blank"><img src="deploy-to-azure.svg"/></a>
 
 > [!TIP]  
 > Right click the button below and select **Open link in new tab** or **Open lin in new window**
@@ -47,9 +47,14 @@ A resource group is a container that holds related resources for an Azure soluti
 
     - Minimum 5 characters
     - Maximum 12 characters
-    - Alphanumberic characters only (no special characters)
+    - Alphanumeric characters only (no special characters)
 
     ![Deployment 04](media/Deployment-04.png)
+
+    > [!NOTE]  
+    > If you are interested in adding Azure Digital Twins, set `Azure Digital Twins` = true  
+    >  
+    > ![Deployment 04 ADT](media/Deployment-04-ADT.png)
 
 1. Click `Review + create`  
 
@@ -58,7 +63,7 @@ A resource group is a container that holds related resources for an Azure soluti
 1. Click `Create` to start deployment
 1. Wait for deployment to complete  
 
-    Typically the deployment process takes about 15 minutes.
+    Typically the deployment process takes about 10 minutes.
 
     ![Deployment 05](media/Deployment-05.png)
 
@@ -70,7 +75,12 @@ A resource group is a container that holds related resources for an Azure soluti
 
 Some Azure services require additional settings, such as permission and access control. We will complete deployment by running a script in Cloud Shell.
 
-1. Switch to `Outputs`
+1. Switch to `Outputs`  
+
+    > [!TIP]  
+    > You can always go to Deployment Outputs page in Azure Portal.  
+    > Navigate to `Resource Group` and select `Deployment`
+
 1. Copy `postDeploymentCommand` by clicking blue button next to the command line
 
     ![Deployment 07](media/Deployment-07.png)
@@ -102,12 +112,9 @@ Some Azure services require additional settings, such as permission and access c
 
     You may close `Cloud Shell` now.
 
-    > [!TIP]
-    > Ignore warnings and `ResourceNotFoundError`
-
     ![Deployment 11](media/Deployment-11.png)
 
-1. Open a new browser window or tab, then navigate to the web site using URL from `Outputs`    
+1. Open a new browser window or tab, then navigate to the web site using URL from `Outputs`  
 
     You can find `_Web_Site_Address` in `Outputs` of the deployment
 
