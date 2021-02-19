@@ -22,9 +22,9 @@
   "variables": {
     "git-repo" : {
       "webApp": "https://github.com/microsoft/project15-openplatform-webapp.git",
-      "webAppBranch": "v0.7",
+      "webAppBranch": "v0.8",
       "functions": "https://github.com/microsoft/project15-openplatform-functions.git",
-      "functionsBranch": "v0.7"
+      "functionsBranch": "v0.8"
     },
     "location": "[resourceGroup().location]",
     "script": {
@@ -69,7 +69,7 @@
       "roleId": "[resourceId('Microsoft.Authorization/roleDefinitions', 'bcd981a7-7f74-457b-83e1-cceb9e632ffe')]"
     },
     "adtRoleName": "[guid(variables('adt').identity, variables('adt').roleId)]",
-    "envTag": "v0.7"
+    "envTag": "v0.8"
   },
   "resources": [
     {
