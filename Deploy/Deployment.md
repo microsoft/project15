@@ -1,10 +1,9 @@
 # Deploying Project 15 from Microsoft Open Platform in 3 steps
 
-This document walks through :
+This document walks through deployment of Project 15 from Microsoft Open Platform in 3 steps.
 
-- How to deploy Project 15 from Microsoft Open Platform
-
-1. Start Deployment with Azure Resource Manager (ARM) Template
+1. Click to open Azure Resource Manager (ARM) Template
+1. Personalize and configure deployment
 1. Run Post Deployment Script
 
 ## Requirements
@@ -15,7 +14,7 @@ This document walks through :
     You must be an administrator or an owner of the subscription  
 - A PC with Web Browser
 
-## 1. ARM Template Deployment
+## 1. Open ARM Template Deployment
 
 Click **Deploy to Azure** button below  
 
@@ -24,7 +23,7 @@ Click **Deploy to Azure** button below
 > [!TIP]  
 > Right click the button below and select **Open link in new tab** or **Open lin in new window**
 
-## 2. Deploy Open Platform solution
+## 2. Personalize and configure deployment
 
 ![Deployment 01](media/Deployment-01.png)
 
@@ -68,7 +67,7 @@ Ensure there is no error reported
 
 ![Deployment 06](media/Deployment-06.png)
 
-## 3. Post Deployment
+## 3. Run Post Deployment Script
 
 Some Azure services require additional settings, such as permission and access control. We will complete deployment by running a script in Cloud Shell.
 
