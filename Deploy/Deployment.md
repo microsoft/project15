@@ -4,6 +4,9 @@ This document walks through :
 
 - How to deploy Project 15 from Microsoft Open Platform
 
+1. Start Deployment with Azure Resource Manager (ARM) Template
+1. Run Post Deployment Script
+
 ## Requirements
 
 - Azure Subscription  
