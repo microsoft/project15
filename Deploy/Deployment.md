@@ -1,4 +1,4 @@
-# Deploying Project 15 from Microsoft Open Platform
+# Deploying Project 15 from Microsoft Open Platform in 3 steps
 
 This document walks through :
 
