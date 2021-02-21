@@ -23,23 +23,21 @@ Click **Deploy to Azure** button below
 
 ## 2. Deploy Open Platform solution
 
-A resource group is a container that holds related resources for an Azure solution. Similar to folder and files.
+![Deployment 01](media/Deployment-01.png)
 
 1. Select Subscription (if you have more than one)  
 
-    ![Deployment 01](media/Deployment-01.png)
+    If you do not have Azure Subscription, please create an account for free for 12 months
 
-1. Open the dialog box by clicking `Create new`
+    <https://azure.microsoft.com/free/>  
 
-1. Give a name to the new resource group, then click `OK` to create a new resource group
+1. Create a new resource Group  
 
-    E.g. MyOpenPlatformSolution
+    A resource group is a container that holds related resources for an Azure solution. Similar to folder and files.
 
-    ![Deployment 02](media/Deployment-02.png)
+    Open the dialog box by clicking `Create new` and give a unique name such as `MyOpenPlatformSolution`  
 
-1. Select Region
-
-    ![Deployment 03](media/Deployment-03.png)
+1. Select Region nearest to you
 
 1. Select Unique ID  
 
@@ -49,27 +47,23 @@ A resource group is a container that holds related resources for an Azure soluti
     - Maximum 12 characters
     - Alphanumeric characters only (no special characters)
 
-    ![Deployment 04](media/Deployment-04.png)
+1. If you are interested in adding Azure Digital Twins, set `Azure Digital Twins` = true  
 
-    > [!NOTE]  
-    > If you are interested in adding Azure Digital Twins, set `Azure Digital Twins` = true  
-    >  
-    > ![Deployment 04 ADT](media/Deployment-04-ADT.png)
+1. Click `Review + create`, then click `Create` to start deployment  
 
-1. Click `Review + create`  
+    > [!TIP]  
+    > Azure Portral validates your parameters, etc.
+    > Some services may not be available in the region you selected.  Please select other regions.
 
-    Azure Resource Manager performs validations
+### Review and Create Open Platform Solution
 
-1. Click `Create` to start deployment
-1. Wait for deployment to complete  
+Typically the deployment process takes about 10 minutes.
 
-    Typically the deployment process takes about 10 minutes.
+![Deployment 05](media/Deployment-05.png)
 
-    ![Deployment 05](media/Deployment-05.png)
+Ensure there is no error reported
 
-1. Ensure there is no error reported
-
-    ![Deployment 06](media/Deployment-06.png)
+![Deployment 06](media/Deployment-06.png)
 
 ## 3. Post Deployment
 
