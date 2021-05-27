@@ -10,7 +10,7 @@
       },
       "minLength": 5,
       "maxLength": 12
-    }
+    },
     "AzureDigitalTwins": {
       "defaultValue": false,
       "type": "bool",
