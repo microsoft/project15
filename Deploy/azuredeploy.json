@@ -77,8 +77,7 @@
       "type": "Microsoft.Resources/deployments",
       "resourceGroup": "[resourceGroup().name]",
       "apiVersion": "2020-10-01",
-      "dependsOn": [
-      ],
+      "dependsOn": [],
       "properties": {
         "mode": "Incremental",
         "expressionEvaluationOptions": {
@@ -87,12 +86,9 @@
         "template": {
           "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
           "contentVersion": "1.0.0.0",
-          "parameters": {
-          },
-          "variables": {
-          },
+          "parameters": {},
+          "variables": {},
           "resources": [
-            // Deploy Event Hubs
             {
               "name": "[variables('eventHubs').nameSpace]",
               "type": "Microsoft.EventHub/namespaces",
@@ -107,10 +103,8 @@
                 "capacity": 1
               },
               "properties": {},
-              "resources": [
-              ]
+              "resources": []
             },
-            // Deploy IoT Hub
             {
               "name": "[variables('iothub').name]",
               "type": "Microsoft.Devices/IotHubs",
@@ -125,7 +119,6 @@
                 "capacity": 1
               }
             },
-            // Deploy DPS
             {
               "name": "[variables('dpsName')]",
               "type": "Microsoft.Devices/provisioningServices",
@@ -134,21 +127,18 @@
               "tags": {
                 "ENV": "[variables('envTag')]"
               },
-              "dependsOn": [
-              ],
+              "dependsOn": [],
               "sku": {
                 "name": "S1",
                 "tier": "Standard",
                 "capacity": 1
               },
-              "properties": {
-              }
+              "properties": {}
             }
           ]
         }
       }
     },
-    // Deploy and configure SignalR
     {
       "name": "[variables('signalrName')]",
       "type": "Microsoft.SignalRService/SignalR",
@@ -180,7 +170,6 @@
         }
       }
     },
-    // Configure Event Hubs
     {
       "name": "[variables('eventHubs').nameSpace]",
       "type": "Microsoft.EventHub/namespaces",
@@ -288,7 +277,6 @@
         }
       ]
     },
-    // Configure IoT Hub
     {
       "name": "[variables('iothub').name]",
       "type": "Microsoft.Devices/IotHubs",
@@ -407,18 +395,8 @@
         },
         "features": "None"
       },
-      "resources": [
-        // {
-        //   "name": "[variables('iothub').eventHubsCG]",
-        //   "type": "Microsoft.Devices/iotHubs/eventhubEndpoints/ConsumerGroups",
-        //   "apiVersion": "2020-03-01",
-        //   "dependsOn": [
-        //     "[resourceId('Microsoft.Devices/IotHubs', variables('iothub').name)]"
-        //   ]
-        // }
-      ]
+      "resources": []
     },
-    // Configure DPS
     {
       "name": "[variables('dpsName')]",
       "type": "Microsoft.Devices/provisioningServices",
@@ -447,7 +425,6 @@
         "allocationPolicy": "Hashed"
       }
     },
-    // Configure Event Grid
     {
       "name": "[variables('iothub').systemTopic]",
       "type": "Microsoft.EventGrid/systemTopics",
@@ -497,7 +474,6 @@
         }
       }
     },
-    // Deploy Storage Account
     {
       "name": "[variables('storageName')]",
       "type": "Microsoft.Storage/storageAccounts",
@@ -511,7 +487,6 @@
       },
       "kind": "StorageV2"
     },
-    // Deploy Server Farm
     {
       "name": "[variables('webApp').hostingPlan]",
       "type": "Microsoft.Web/serverfarms",
@@ -532,7 +507,6 @@
         "numberOfWorkers": 1
       }
     },
-    // Deploy Functions
     {
       "name": "Deploy-Functions",
       "type": "Microsoft.Resources/deployments",
@@ -547,17 +521,13 @@
         "expressionEvaluationOptions": {
           "scope": "outer"
         },
-        "parameters": {
-        },
+        "parameters": {},
         "template": {
           "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
           "contentVersion": "1.0.0.0",
-          "parameters": {
-          },
-          "variables": {
-          },
+          "parameters": {},
+          "variables": {},
           "resources": [
-            // Functions App
             {
               "name": "[variables('webApp').functionsName]",
               "type": "Microsoft.Web/sites",
@@ -567,8 +537,7 @@
               "tags": {
                 "ENV": "[variables('envTag')]"
               },
-              "dependsOn": [
-              ],
+              "dependsOn": [],
               "identity": {
                 "type": "SystemAssigned"
               },
@@ -616,7 +585,6 @@
         }
       }
     },
-    // Configure Functions
     {
       "name": "[concat(variables('webApp').functionsName, '/appsettings')]",
       "type": "Microsoft.Web/sites/config",
@@ -644,7 +612,6 @@
         "ModelRepository": "[concat(variables('PrivateModelRepo').url, variables('PrivateModelRepo').branch)]"
       }
     },
-    // Deploy WebApp
     {
       "name": "Deploy-Webapp",
       "type": "Microsoft.Resources/deployments",
@@ -662,18 +629,15 @@
         "template": {
           "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
           "contentVersion": "1.0.0.0",
-          "parameters": {
-          },
-          "variables": {
-          },
+          "parameters": {},
+          "variables": {},
           "resources": [
             {
               "name": "[variables('webApp').webappName]",
               "type": "Microsoft.Web/sites",
               "apiVersion": "2020-09-01",
               "location": "[variables('location')]",
-              "dependsOn": [
-              ],
+              "dependsOn": [],
               "tags": {
                 "ENV": "[variables('envTag')]"
               },
@@ -703,7 +667,6 @@
         }
       }
     },
-    // Define Functions for WebApp
     {
       "name": "[variables('webApp').functionsName]",
       "type": "Microsoft.Web/sites",
@@ -721,7 +684,6 @@
       },
       "properties": {}
     },
-    // Configure WebApp
     {
       "name": "[concat(variables('webApp').webappName, '/appsettings')]",
       "type": "Microsoft.Web/sites/config",
@@ -750,7 +712,6 @@
         "Azure__GitHub__token": ""
       }
     },
-    // Deploy and configure TSI
     {
       "name": "[variables('tsi').environment]",
       "type": "Microsoft.TimeSeriesInsights/environments",
@@ -806,7 +767,6 @@
         }
       ]
     },
-    // Deploy and configure Azure Maps
     {
       "name": "[variables('mapName')]",
       "type": "Microsoft.Maps/accounts",
@@ -821,7 +781,6 @@
         "disableLocalAuth": false
       }
     },
-    // Deploy ADT if selected
     {
       "condition": "[parameters('AzureDigitalTwins')]",
       "name": "[variables('adt').name]",
