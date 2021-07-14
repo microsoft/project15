@@ -22,9 +22,9 @@
   "variables": {
     "git-repo": {
       "webApp": "https://github.com/microsoft/project15-openplatform-webapp.git",
-      "webAppBranch": "v0.82",
+      "webAppBranch": "v0.83",
       "functions": "https://github.com/microsoft/project15-openplatform-functions.git",
-      "functionsBranch": "v0.82"
+      "functionsBranch": "v0.83"
     },
     "location": "[resourceGroup().location]",
     "script": {
