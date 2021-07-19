@@ -165,7 +165,7 @@
         "cors": {
           "allowedOrigins": [
             "[variables('webApp').webappUrl]",
-            "https://localhost:44355"
+            "https://localhost:44352"
           ]
         }
       }
